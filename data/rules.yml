@@ -12,7 +12,7 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Search the file when user gives input
+- rule: Search the file when user gives qustion
   steps:
   - intent: question
   - action: action_get_answer
