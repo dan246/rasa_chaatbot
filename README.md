@@ -12,7 +12,8 @@ pip install rasa
 ```
 
 然後，創建一個虛擬環境並啟動它：
-'''bash
+
+```bash
 python -m venv venv
 source venv/bin/activate  # 在 Windows 上，使用 `venv\Scripts\activate`
 ```
