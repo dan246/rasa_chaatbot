@@ -68,6 +68,5 @@ rasa shell
 
 # 聯絡方式
 如果您有任何問題或反饋，請隨時與我們聯繫。
-
-# 作者： Daniel
-# 電子郵件：sky328423@gmail.com
+作者： Daniel
+電子郵件：sky328423@gmail.com
