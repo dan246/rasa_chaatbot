@@ -8,19 +8,19 @@
 
 ```bash
 pip install rasa
-```bash
+```
 
 然後，創建一個虛擬環境並啟動它：
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # 在 Windows 上，使用 `venv\Scripts\activate`
-```bash
+```
 
 接下來，安裝本項目的依賴項：
 ```bash
 pip install -r requirements.txt
-```bash
+```
 
 # 訓練模型 & 自定義配置
 要訓練 Rasa 機器人模型，您需要創建一個訓練數據集（這份文檔並未提供，可以連接 Mongodb 來轉換資料庫內的資料）。訓練數據集應包括對話示例、實體和意圖。
@@ -32,13 +32,13 @@ pip install -r requirements.txt
 
 ```bash
 rasa run actions
-```bash
+```
 您的 data 資料夾裡應該會出現 question.yml
 
 然後執行
 ```bash
 rasa train --data ..\question.yml
-```bash
+```
 這將會讓 Rasa 訓練轉換過後的 question.yml 
 
 
@@ -46,22 +46,22 @@ rasa train --data ..\question.yml
 訓練完成後，使用以下指令執行機器人
 ```bash
 rasa run actions
-```bash
+```
 new cmd
 ```bash
 rasa run -m models --enable-api --port 5002 --credentials credentials.yml
-```bash
+```
 
 機器人將運行在 http://localhost:5002（默認端口）。您可以使用任何聊天用戶界面（例如 Rasa X 或自定義界面）來與機器人互動。
 
 如要在本機端使用，請使用以下指令
 ```bash
 rasa run actions
-```bash
+```
 new cmd
 ```bash
 rasa shell
-```bash
+```
 
 # 與單獨使用 ChatGPT 的不同之處
 當同樣的問題被連續問之後，ChatGPT 會改變自己的回答，如果發生在實驗上，可能會導致實驗步驟出錯而失敗，但 Rasa 合併 GPT-3 不會因為重複問而改變對於專業問題的回答。這是因為 ChatGPT 是基於 GPT-3 訓練的語言模型，無法保證對於重複問題的回答始終保持一致。 ChatGPT 生成的回答受其預訓練數據、上下文和隨機性的影響，可能在連續提問相同問題時產生變化。相比之下，Rasa 只是一個對話管理框架，可以與 GPT-3 或其他模型集成，但 Rasa 本身並不決定模型的行為。在 Rasa 合併 GPT-3 的配置中，Rasa 可以通過設置上下文、處理重複問題等方式來控制回答，以確保對於專業問題的回答保持一致。
