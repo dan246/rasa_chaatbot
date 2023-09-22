@@ -8,7 +8,7 @@
 
 ```bash
 pip install rasa
-'''bash
+```
 
 然後，創建一個虛擬環境並啟動它：
 '''bash
