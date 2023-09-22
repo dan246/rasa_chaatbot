@@ -1,6 +1,7 @@
 # Rasa 聊天機器人
 
 這是一個使用 Rasa 構建的聊天機器人項目，它允許您創建自定義的聊天應用程序。請注意，本文檔假定您已經在您的電腦上安裝了 Rasa 和所需的依賴項。
+將 Rasa 連接到 Mongodb 裡方便直接從資料庫裡撈取資料，資料撈出後會透由自訂義操作轉換成 nlu 接受的格式，訓練完後可透過以下提到的指令使用，如要使用 GPT，請將您的 OPEN AI api key  貼到 actions.py 裡
 
 ## 安裝
 
@@ -36,13 +37,30 @@ rasa run
 ```
 
 # 使用機器人
-機器人將運行在 http://localhost:5005（默認端口）。您可以使用任何聊天用戶界面（例如 Rasa X 或自定義界面）來與機器人互動。
+
+```bash
+rasa run actions
+```
+new cmd
+```bash
+rasa run -m models --enable-api --port 5002 --credentials credentials.yml
+```
+
+機器人將運行在 http://localhost:5002（默認端口）。您可以使用任何聊天用戶界面（例如 Rasa X 或自定義界面）來與機器人互動。
+
+如要在本機端使用，請使用以下指令
+```bash
+rasa run actions
+```
+new cmd
+```bash
+rasa shell
+```
+
 
 # 自定義配置
 您可以根據項目需求自定義 Rasa 機器人的配置。有關配置的詳細信息，請參閱 [Rasa官方文檔](https://rasa.com/docs/rasa/)。
 
-# 版本控制
-請在本項目中使用版本控制，以跟蹤代碼的變更。您可以使用 Git 等工具來管理您的項目。
 
 # 聯絡方式
 如果您有任何問題或反饋，請隨時與我們聯繫。
