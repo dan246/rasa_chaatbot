@@ -7,7 +7,8 @@
 首先，確保您已經在您的 Python 環境中安裝了 Rasa。如果您尚未安裝，您可以使用以下指令進行安裝：
 
 ```bash
-pip install rasa
+pip install rasa==2.6.2
+pip install rasa==2.6.0
 ```
 
 然後，創建一個虛擬環境並啟動它：
