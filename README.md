@@ -8,7 +8,7 @@
 
 ```bash
 pip install rasa==2.6.2
-pip install rasa==2.6.0
+pip install rasa-sdk==2.6.0
 ```
 
 然後，創建一個虛擬環境並啟動它：
