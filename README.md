@@ -53,7 +53,9 @@ new cmd
 rasa run -m models --enable-api --port 5002 --credentials credentials.yml
 ```
 
-機器人將運行在 http://localhost:5002（默認端口）。您可以使用任何聊天用戶界面（例如 Rasa X 或自定義界面）來與機器人互動。
+機器人將運行在 http://localhost:5002（默認端口）。
+
+您可以使用任何聊天用戶界面（例如 Rasa X 或自定義界面）來與機器人互動。
 
 如要在本機端使用，請使用以下指令
 ```bash
